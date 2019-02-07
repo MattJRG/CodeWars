@@ -1,3 +1,5 @@
+// URL: https://www.codewars.com/kata/525f039017c7cd0e1a000a26
+
 // Description 
 /*
 Number is a palindrome if it is equal to the number with digits in reversed order. For example, 5, 44, 171, 4884 are palindromes and 43, 194, 4773 are not palindromes.
