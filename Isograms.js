@@ -10,12 +10,12 @@ isIsogram( "aba" ) == false
 isIsogram( "moOse" ) == false // -- ignore letter case
 */
 
-// Code
+// Code 1
 
 function isIsogram(str){
-  arr = str.toLowerCase().split('')
+  const arr = str.toLowerCase().split('')
   
-  usedLetters = [];
+  const usedLetters = [];
   
   for (let i = 0; i < arr.length; i++) {
     const letter = arr[i];
@@ -27,3 +27,21 @@ function isIsogram(str){
   }
   return true;
 }
+
+// Code alternative
+/*
+function isIsogram(str) {
+  
+  const counts = {};
+  
+  for (let i = 0; i < str.length; i++) {
+    const letter = str[i].toLowerCase();
+    if (!counts[letter]) {
+      counts[letter] = 1;
+    } else {
+      return false
+    }
+  }
+  return true;
+}
+*/
