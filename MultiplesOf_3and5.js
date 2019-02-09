@@ -44,7 +44,7 @@ function solution(number){
     }
   
   for (let i = 5; i < number; i+=5) {
-    if (i % 3==0) {
+    if (i % 3 === 0) {
     } else {
       sum += i;
     }
