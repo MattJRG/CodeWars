@@ -24,9 +24,9 @@ function order(words){
   let output = [];
   // loop through wordsArr and place each element in output array using its number as the position in output array
   for (let i = 0; i < wordsArr.length; i++){
-    let place = parseInt(wordsArr[i].replace(/[^0-9\.]/g, ''), 10);
+    let place = parseInt(wordsArr[i].replace(/[^0-9\.]/g, ''), 10) - 1;
     output[place] = wordsArr[i];
   }
-  // return the output array as a string and trim spaces from either end
-  return output.join(' ').trim();
+  // return the output array as a string
+  return output.join(' ')
 }
