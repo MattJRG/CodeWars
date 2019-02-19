@@ -26,6 +26,15 @@ function narcissistic(value) {
   }, 0);
 }
 
+// Code alternative more optimised reduce
+/*
+function narcissistic(value) {
+  return value === ('' + value).split('').reduce(function(sum, digit, index, arr) {
+    return sum += Math.pow( + digit, arr.length);
+  }, 0);
+}
+*/
+
 // Code alternative using for loop
 /*
 function narcissistic(value) {
