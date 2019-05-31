@@ -17,9 +17,45 @@ longest(a, a) -> "abcdefghijklmnopqrstuvwxyz"
 
 // Code
 
-function longest(s1, s2) {
-  s1 += s2
-  return s1.split('').sort().filter(function(char, pos, self) {
-    return self.indexOf(char) == pos;
-  }).join('')
-}
+// Solution 1
+
+// function longest(s1, s2) {
+//   s1 += s2;
+//   return s1.split('').sort().filter(function(char, index, arr) {
+//     return arr.indexOf(char) == index;
+//   }).join('');
+// }
+
+// Solution 2
+
+// function longest(s1, s2) {
+//   s1 += s2;
+//   let uniqueChars = [];
+//   for (let i = 0; i < s1.length; i++){
+//     let char = s1[i];
+//     if (uniqueChars.indexOf(char) < 0) {
+//       uniqueChars.push(char);
+//     }
+//   }
+//   return uniqueChars.sort().join('')
+// }
+
+// Solution 3
+
+// function longest(s1, s2) {
+//   return (s1 += s2).split('').reduce((acc, char) => {
+//     if (acc.indexOf(char) < 0) {
+//       acc.push(char);
+//     }
+//     return acc;
+//   }, []).sort().join('')
+// }
+
+// Solution 4
+
+// function longest(s1, s2) {
+//   const uniqueLetters = new Set(s1 + s2);
+//   return [...uniqueLetters.values()].sort().join('');
+// }
+
+// console.log(longest('baraban', 'wanted'))
